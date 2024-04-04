@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchBarCell" rowHeight="151" id="KGk-i7-Jjw" customClass="SearchBarCell" customModule="MovieDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="151"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="151"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Your Favorite Movie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bo-PO-LWx">
+                        <rect key="frame" x="0.0" y="20" width="393" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-1I-wJ0" userLabel="Search Bar" customClass="RoundBorderedCell" customModule="MovieDB" customModuleProvider="target">
+                        <rect key="frame" x="12" y="57" width="369" height="28"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW8-UI-Gpn" userLabel="Search Button">
+                                <rect key="frame" x="343" y="4" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="830-Ma-N7o"/>
+                                    <constraint firstAttribute="width" secondItem="oW8-UI-Gpn" secondAttribute="height" multiplier="1:1" id="Wtc-W4-srH"/>
+                                </constraints>
+                                <state key="normal" image="icons8-search-filled-50"/>
+                                <connections>
+                                    <action selector="tappedSearchButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9wE-N2-VOn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Movie..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNp-F6-Zb9">
+                                <rect key="frame" x="8" y="0.0" width="327" height="28"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TNp-F6-Zb9" firstAttribute="leading" secondItem="KEJ-1I-wJ0" secondAttribute="leading" constant="8" id="5Y1-1f-aEX"/>
+                            <constraint firstAttribute="bottom" secondItem="TNp-F6-Zb9" secondAttribute="bottom" id="EBk-02-np6"/>
+                            <constraint firstAttribute="trailing" secondItem="oW8-UI-Gpn" secondAttribute="trailing" constant="6" id="I78-oB-vmG"/>
+                            <constraint firstItem="TNp-F6-Zb9" firstAttribute="top" secondItem="KEJ-1I-wJ0" secondAttribute="top" id="Rou-4Y-FC3"/>
+                            <constraint firstAttribute="bottom" secondItem="oW8-UI-Gpn" secondAttribute="bottom" constant="4" id="f6M-FR-qxi"/>
+                            <constraint firstItem="oW8-UI-Gpn" firstAttribute="top" secondItem="KEJ-1I-wJ0" secondAttribute="top" constant="4" id="nqU-9q-D9q"/>
+                            <constraint firstItem="oW8-UI-Gpn" firstAttribute="leading" secondItem="TNp-F6-Zb9" secondAttribute="trailing" constant="8" id="uhf-6a-Tkb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf1-fQ-f6v">
+                        <rect key="frame" x="16" y="109" width="65" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwO-ZW-0a4" userLabel="Movie Filter" customClass="RoundBorderedButton" customModule="MovieDB" customModuleProvider="target">
+                        <rect key="frame" x="89" y="101" width="70" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="jvA-Q6-YMh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Movie">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="tappedMovieSearch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cc2-F3-ISW"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-Ly-WMS" userLabel="TV Show Filter" customClass="RoundBorderedButton" customModule="MovieDB" customModuleProvider="target">
+                        <rect key="frame" x="167" y="101" width="70" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="0VC-ZK-o43"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="TV Show">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="tappedTvShowSearch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7MS-GE-jk6"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LwO-ZW-0a4" firstAttribute="leading" secondItem="Cf1-fQ-f6v" secondAttribute="trailing" constant="8" id="0qp-aL-iID"/>
+                    <constraint firstItem="cgP-Ly-WMS" firstAttribute="top" secondItem="KEJ-1I-wJ0" secondAttribute="bottom" constant="16" id="6uV-vJ-mSv"/>
+                    <constraint firstItem="9bo-PO-LWx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AvW-09-lmG"/>
+                    <constraint firstItem="cgP-Ly-WMS" firstAttribute="leading" secondItem="LwO-ZW-0a4" secondAttribute="trailing" constant="8" symbolic="YES" id="Az9-BC-AxM"/>
+                    <constraint firstItem="9bo-PO-LWx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="NbA-l0-75f"/>
+                    <constraint firstItem="Cf1-fQ-f6v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PJs-4z-QnZ"/>
+                    <constraint firstItem="KEJ-1I-wJ0" firstAttribute="top" secondItem="9bo-PO-LWx" secondAttribute="bottom" constant="16" id="bw2-oC-La7"/>
+                    <constraint firstItem="LwO-ZW-0a4" firstAttribute="top" secondItem="KEJ-1I-wJ0" secondAttribute="bottom" constant="16" id="d0S-r8-F9F"/>
+                    <constraint firstAttribute="trailing" secondItem="KEJ-1I-wJ0" secondAttribute="trailing" constant="12" id="gP4-ay-aOY"/>
+                    <constraint firstItem="KEJ-1I-wJ0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="gYg-oN-6wz"/>
+                    <constraint firstAttribute="trailing" secondItem="9bo-PO-LWx" secondAttribute="trailing" id="rY5-DI-bVb"/>
+                    <constraint firstItem="Cf1-fQ-f6v" firstAttribute="top" secondItem="KEJ-1I-wJ0" secondAttribute="bottom" constant="24" id="ygg-w1-BOY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="movieButton" destination="LwO-ZW-0a4" id="YX2-ma-8l4"/>
+                <outlet property="searchInputText" destination="TNp-F6-Zb9" id="AAp-iQ-skB"/>
+                <outlet property="tvShowButton" destination="cgP-Ly-WMS" id="sBl-di-sUD"/>
+            </connections>
+            <point key="canvasLocation" x="71" y="71"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="LwO-ZW-0a4">
+            <size key="intrinsicContentSize" width="37" height="32"/>
+        </designable>
+        <designable name="cgP-Ly-WMS">
+            <size key="intrinsicContentSize" width="54" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icons8-search-filled-50" width="50" height="50"/>
+    </resources>
+</document>

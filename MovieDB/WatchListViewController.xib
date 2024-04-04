@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WatchListViewController" customModule="Tugas_1_Pram" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyListLabel" destination="3pd-4E-azu" id="j0W-8I-Ig6"/>
+                <outlet property="view" destination="4Yh-Dr-ZP9" id="jcq-li-gfD"/>
+                <outlet property="watchListTableView" destination="ady-7z-j1Y" id="G8d-TT-hua"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4Yh-Dr-ZP9">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="XDG-R3-tgs">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ady-7z-j1Y" userLabel="List" customClass="CustomTableView" customModule="Tugas_1_Pram" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add movies or tv shows to your watch list!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pd-4E-azu" userLabel="Empty List Label">
+                    <rect key="frame" x="0.0" y="74" width="393" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="SYV-r8-w5q"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ady-7z-j1Y" firstAttribute="leading" secondItem="SYV-r8-w5q" secondAttribute="leading" id="0gR-9U-buf"/>
+                <constraint firstItem="XDG-R3-tgs" firstAttribute="leading" secondItem="4Yh-Dr-ZP9" secondAttribute="leading" id="7XS-hd-TOM"/>
+                <constraint firstAttribute="bottom" secondItem="XDG-R3-tgs" secondAttribute="bottom" id="A0W-ZK-MOV"/>
+                <constraint firstItem="SYV-r8-w5q" firstAttribute="bottom" secondItem="ady-7z-j1Y" secondAttribute="bottom" id="JGv-18-DXk"/>
+                <constraint firstItem="3pd-4E-azu" firstAttribute="trailing" secondItem="SYV-r8-w5q" secondAttribute="trailing" id="O5H-u3-5P1"/>
+                <constraint firstAttribute="trailing" secondItem="XDG-R3-tgs" secondAttribute="trailing" id="coS-gp-WKM"/>
+                <constraint firstItem="ady-7z-j1Y" firstAttribute="top" secondItem="SYV-r8-w5q" secondAttribute="top" id="f6Q-KS-Mbp"/>
+                <constraint firstItem="SYV-r8-w5q" firstAttribute="trailing" secondItem="ady-7z-j1Y" secondAttribute="trailing" id="fE0-Pi-Wmq"/>
+                <constraint firstItem="XDG-R3-tgs" firstAttribute="centerY" secondItem="4Yh-Dr-ZP9" secondAttribute="centerY" id="nqa-GW-XAg"/>
+                <constraint firstItem="3pd-4E-azu" firstAttribute="leading" secondItem="SYV-r8-w5q" secondAttribute="leading" id="qzb-Xa-s1G"/>
+                <constraint firstItem="XDG-R3-tgs" firstAttribute="centerX" secondItem="4Yh-Dr-ZP9" secondAttribute="centerX" id="yWT-38-Jda"/>
+                <constraint firstItem="3pd-4E-azu" firstAttribute="top" secondItem="SYV-r8-w5q" secondAttribute="top" constant="15" id="zAE-2w-F0n"/>
+                <constraint firstItem="XDG-R3-tgs" firstAttribute="top" secondItem="4Yh-Dr-ZP9" secondAttribute="top" id="ze4-PE-9EP"/>
+            </constraints>
+            <point key="canvasLocation" x="25.190839694656489" y="51.408450704225352"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bottom" width="1080" height="1920"/>
+    </resources>
+</document>

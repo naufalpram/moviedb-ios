@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WatchListTableCell" rowHeight="120" id="KGk-i7-Jjw" customClass="WatchListTableCell" customModule="Tugas_1_Pram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCU-O9-HE2">
+                        <rect key="frame" x="4" y="12" width="72" height="96"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5s-dX-QLz">
+                        <rect key="frame" x="88" y="12" width="212" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="R56-8W-DBD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTc-kR-jYm" userLabel="Remove Button">
+                        <rect key="frame" x="312" y="46" width="26" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="Xvf-4S-MlH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="tintColor" red="0.70783356949999998" green="0.70783356949999998" blue="0.70783356949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="trash" catalog="system">
+                            <color key="titleColor" red="0.70783356945924081" green="0.70783356945924081" blue="0.70783356945924081" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                        <connections>
+                            <action selector="didTappedRemoveBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DVX-gj-Jge"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="G5s-dX-QLz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="3vB-tt-q3r"/>
+                    <constraint firstAttribute="trailing" secondItem="XTc-kR-jYm" secondAttribute="trailing" constant="12" id="5Ve-S1-Lgl"/>
+                    <constraint firstItem="eCU-O9-HE2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="8fy-Rr-ZpZ"/>
+                    <constraint firstItem="eCU-O9-HE2" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="3:5" id="Gi9-pk-bYX"/>
+                    <constraint firstAttribute="bottom" secondItem="G5s-dX-QLz" secondAttribute="bottom" constant="12" id="I1m-Ld-NAg"/>
+                    <constraint firstItem="eCU-O9-HE2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ihp-e1-dhe"/>
+                    <constraint firstItem="XTc-kR-jYm" firstAttribute="leading" secondItem="G5s-dX-QLz" secondAttribute="trailing" constant="12" id="Sgs-mi-QjO"/>
+                    <constraint firstItem="G5s-dX-QLz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aia-Am-k2k"/>
+                    <constraint firstItem="XTc-kR-jYm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bt4-52-U6h"/>
+                    <constraint firstItem="G5s-dX-QLz" firstAttribute="leading" secondItem="eCU-O9-HE2" secondAttribute="trailing" constant="12" id="tSI-Yp-o3c"/>
+                    <constraint firstItem="eCU-O9-HE2" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="yZM-QG-Ztj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="posterImageView" destination="eCU-O9-HE2" id="hU9-83-sjs"/>
+                <outlet property="titleLabel" destination="G5s-dX-QLz" id="S3H-PW-gnx"/>
+            </connections>
+            <point key="canvasLocation" x="65.648854961832058" y="45.774647887323944"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="trash" catalog="system" width="117" height="128"/>
+    </resources>
+</document>

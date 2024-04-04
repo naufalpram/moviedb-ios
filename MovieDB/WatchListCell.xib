@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WatchListCell" rowHeight="138" id="KGk-i7-Jjw" customClass="WatchListCell" customModule="Tugas_1_Pram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="410"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="410"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otP-CU-4zd" userLabel="Watch List Header">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Watch List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXV-n2-Vti">
+                                <rect key="frame" x="12" y="15.999999999999998" width="121" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLv-U1-0Qe" userLabel="Show All Button">
+                                <rect key="frame" x="323" y="12" width="58" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show All">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTappedShowAll:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="G5M-if-Mys"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lXV-n2-Vti" firstAttribute="leading" secondItem="otP-CU-4zd" secondAttribute="leading" constant="12" id="2EM-fs-GhF"/>
+                            <constraint firstItem="DLv-U1-0Qe" firstAttribute="top" secondItem="otP-CU-4zd" secondAttribute="top" constant="12" id="G8N-qO-BUi"/>
+                            <constraint firstAttribute="height" constant="40" id="hGe-On-Ur0"/>
+                            <constraint firstAttribute="trailing" secondItem="DLv-U1-0Qe" secondAttribute="trailing" constant="12" id="q8v-Qz-Ed4"/>
+                            <constraint firstItem="lXV-n2-Vti" firstAttribute="top" secondItem="otP-CU-4zd" secondAttribute="top" constant="16" id="u4S-d1-w74"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9He-xK-I2d">
+                        <rect key="frame" x="0.0" y="48" width="393" height="240"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="240" id="aVG-Xb-Vuh"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bIn-I1-BnF">
+                            <size key="itemSize" width="128" height="240"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add movies or tv shows to your watch list!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgQ-YW-oaf">
+                        <rect key="frame" x="74.666666666666671" y="48" width="243.66666666666663" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="otP-CU-4zd" secondAttribute="trailing" id="03N-Lu-LVt"/>
+                    <constraint firstItem="9He-xK-I2d" firstAttribute="top" secondItem="otP-CU-4zd" secondAttribute="bottom" constant="8" symbolic="YES" id="5dZ-Rf-c6Z"/>
+                    <constraint firstItem="9He-xK-I2d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8tT-cQ-oTh"/>
+                    <constraint firstAttribute="trailing" secondItem="9He-xK-I2d" secondAttribute="trailing" id="GTU-hw-sJs"/>
+                    <constraint firstItem="otP-CU-4zd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Q4I-c3-4hd"/>
+                    <constraint firstItem="KgQ-YW-oaf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eUM-wE-rQR"/>
+                    <constraint firstItem="otP-CU-4zd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pzo-XY-t9N"/>
+                    <constraint firstItem="KgQ-YW-oaf" firstAttribute="top" secondItem="otP-CU-4zd" secondAttribute="bottom" constant="8" symbolic="YES" id="qHS-xf-O19"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="emptyListLabel" destination="KgQ-YW-oaf" id="O5Z-vy-IMq"/>
+                <outlet property="watchListCollectionView" destination="9He-xK-I2d" id="JzL-MN-vHE"/>
+            </connections>
+            <point key="canvasLocation" x="138.1679389312977" y="52.816901408450704"/>
+        </tableViewCell>
+    </objects>
+</document>
